@@ -127,6 +127,7 @@ public class AbastecimentoController {
 	}
 
 	private void findPrevios(Abastecimento abastecimento, BindingResult bindingResult) {		
+		
 		Optional<Abastecimento> opPrevius = service.findPreviusAbastecimentoByDate(abastecimento.getVeiculo().getIdVeiculo(), abastecimento.getDataAbastecimento());
 
 		if (opPrevius.isPresent()) {

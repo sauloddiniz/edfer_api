@@ -1,4 +1,4 @@
-package com.edfer.model.logistica;
+package com.edfer.model.enuns;
 
 public enum EnunCategoriaCnh {
 

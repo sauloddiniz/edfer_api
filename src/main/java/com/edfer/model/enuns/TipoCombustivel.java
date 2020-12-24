@@ -14,7 +14,8 @@ public enum TipoCombustivel {
 	DIESEL(7, "Diesel"),
 	DIESEL_S10(8, "Diesel S10"),
 	DIESEL_ADITIVADO(9, "Diesel Aditivado"),
-	DIESEL_PREMIUM(10, "Diesel Premium");
+	DIESEL_PREMIUM(10, "Diesel Premium"),
+	ARLA32(11, "Arla 32");
 
 	private int codigo;
 	private String descricao;

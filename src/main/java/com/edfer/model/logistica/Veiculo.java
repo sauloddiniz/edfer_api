@@ -14,6 +14,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
+import javax.persistence.PrePersist;
 import javax.persistence.Table;
 
 import com.edfer.model.Categoria;
@@ -123,5 +124,10 @@ public class Veiculo implements Serializable {
 	
 	public void sumHodometro(Long hodometro) {
 		this.hodometro += hodometro;
+	}
+	
+	@PrePersist
+	public void setUpperCase() {
+		this.placa = this.placa.toUpperCase();
 	}
 }

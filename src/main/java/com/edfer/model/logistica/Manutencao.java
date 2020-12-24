@@ -97,6 +97,10 @@ public class Manutencao extends Auditable implements Serializable {
 
 	@PrePersist
 	private void sumValidadeHodomero() {
+		if(this.valorManutencao == null) {
+			this.valorManutencao = new BigDecimal(0) ;
+		}
+		
 		if (this.validadeHodometro != null) {
 			this.validadeHodometro += this.hodometroEfetuado;
 		}

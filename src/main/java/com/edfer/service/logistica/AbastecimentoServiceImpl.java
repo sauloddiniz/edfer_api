@@ -22,7 +22,9 @@ public class AbastecimentoServiceImpl implements AbastecimentoService{
 	@Override
 	public void salvar(Abastecimento abastecimento) {
 		Optional<Long> previous = repository.findMenorHodometro(abastecimento.getVeiculo().getIdVeiculo(), abastecimento.getHodometro());
-		abastecimento.updateConsumoMedio(previous.get());
+		if(previous.isPresent()) {
+			abastecimento.updateConsumoMedio(previous.get());			
+		}
 		repository.save(abastecimento);
 	}
 

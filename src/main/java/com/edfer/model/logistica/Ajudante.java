@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 
+import com.edfer.model.enuns.EnunCategoriaCnh;
 import com.sun.istack.NotNull;
 
 import lombok.Getter;

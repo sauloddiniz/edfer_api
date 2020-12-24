@@ -19,6 +19,6 @@ public interface AbastecimentoRepository extends JpaRepository<Abastecimento, Lo
 
 	Optional<Abastecimento> findTop1ByVeiculoIdVeiculoAndDataAbastecimentoGreaterThanOrderByDataAbastecimento(Long idVeiculo, LocalDateTime dataAbastecimento);
 	
-	@Query(value = "SELECT hodometro FROM bd_edfer.abastecimento where id_veiculo = :idVeiculo AND hodometro < :hodometro ORDER BY hodometro DESC LIMIT 1", nativeQuery = true)
+	@Query(value = "SELECT hodometro FROM edfer_logistica.abastecimento where id_veiculo = :idVeiculo AND hodometro < :hodometro ORDER BY hodometro DESC LIMIT 1", nativeQuery = true)
 	Optional<Long> findMenorHodometro(Long idVeiculo, Long hodometro);
 }

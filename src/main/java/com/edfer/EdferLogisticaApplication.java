@@ -10,5 +10,4 @@ public class EdferLogisticaApplication extends SpringBootServletInitializer {
 	public static void main(String[] args) {
 		SpringApplication.run(EdferLogisticaApplication.class, args);
 	}
-
 }
