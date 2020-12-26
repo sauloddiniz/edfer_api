@@ -18,15 +18,15 @@ import org.springframework.stereotype.Component;
 @Order(Ordered.HIGHEST_PRECEDENCE)
 public class FilterCors implements Filter{
 
-	private static String ORIGEM = "http://localhost:4200";
+	private static String ORIGEM = "http://localhost:8585/edfer_ui";
 	
 	@Override
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
-	
+			
 		HttpServletRequest req = (HttpServletRequest) request;
 		HttpServletResponse res = (HttpServletResponse) response;
-		
+
 		res.setHeader("Access-Control-Allow-Origin", ORIGEM);
 		res.setHeader("Access-Control-Allow-Credentials", "true");
 
